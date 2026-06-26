@@ -15,5 +15,23 @@ export default async function handler(req, res) {
   );
 
   const raw = await response.json();
-  return res.status(200).json(raw);
+  const user = raw?.data?.user;
+
+  if (!user) return res.status(404).json({ error: 'Perfil no encontrado' });
+
+  return res.status(200).json({
+    username: user.username,
+    fullName: user.full_name || '',
+    followers: user.edge_followed_by?.count || 0,
+    following: user.edge_follow?.count || 0,
+    posts: user.edge_owner_to_timeline_media?.count || 0,
+    bio: user.biography || '',
+    profilePic: user.profile_pic_url_hd || user.profile_pic_url || '',
+    isVerified: user.is_verified || false,
+    isBusiness: user.is_business_account || false,
+    isPrivate: user.is_private || false,
+    externalUrl: user.external_url || '',
+    category: user.category_name || '',
+    real: true
+  });
 }
