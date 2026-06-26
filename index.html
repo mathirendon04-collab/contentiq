@@ -28,13 +28,11 @@ html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--white);font-family:var(--font);min-height:100vh;overflow-x:hidden;}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(7,9,15,0.85);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);z-index:100;}
 .logo{font-family:var(--mono);font-size:17px;color:var(--cyan);letter-spacing:3px;}
 .logo em{color:var(--white);font-style:normal;}
 .nav-pill{font-family:var(--mono);font-size:10px;color:var(--gray);border:1px solid var(--border);padding:5px 14px;border-radius:20px;letter-spacing:1px;}
 
-/* HERO */
 #hero{position:relative;min-height:100vh;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:130px 20px 70px;text-align:center;}
 
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.2);padding:7px 16px;border-radius:20px;margin-bottom:28px;font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:2px;}
@@ -46,7 +44,6 @@ h1.hero-title .c{color:var(--cyan);}
 
 .hero-sub{font-size:clamp(16px,2vw,19px);color:var(--gray);max-width:500px;line-height:1.65;margin-bottom:48px;}
 
-/* SEARCH */
 .search-wrap{width:100%;max-width:580px;}
 .search-box{display:flex;align-items:center;background:var(--bg2);border:1px solid rgba(0,212,255,0.2);border-radius:var(--r);padding:5px 5px 5px 22px;gap:12px;transition:border-color .3s,box-shadow .3s;}
 .search-box:focus-within{border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-glow),0 0 30px rgba(0,212,255,0.06);}
@@ -59,13 +56,11 @@ h1.hero-title .c{color:var(--cyan);}
 .s-btn svg{width:15px;height:15px;}
 .s-hint{font-family:var(--mono);font-size:11px;color:var(--gray2);margin-top:14px;letter-spacing:.5px;}
 
-/* PROOF BAR */
 .proof-bar{display:flex;gap:48px;margin-top:64px;padding-top:40px;border-top:1px solid var(--border);flex-wrap:wrap;justify-content:center;}
 .proof-item{text-align:center;}
 .proof-num{font-family:var(--mono);font-size:30px;font-weight:700;color:var(--cyan);}
 .proof-label{font-size:11px;color:var(--gray);letter-spacing:1.5px;margin-top:5px;text-transform:uppercase;}
 
-/* ANALYZING */
 #analyzing{display:none;position:fixed;inset:0;background:rgba(7,9,15,0.97);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
 .a-ring{width:180px;height:180px;position:relative;}
 .a-ring svg{width:100%;height:100%;transform:rotate(-90deg);}
@@ -76,7 +71,6 @@ h1.hero-title .c{color:var(--cyan);}
 .a-user{font-family:var(--mono);font-size:13px;color:var(--gray);letter-spacing:2px;}
 .a-status{font-family:var(--mono);font-size:12px;color:var(--gray);letter-spacing:1px;min-height:20px;}
 
-/* RESULT */
 #result{display:none;position:fixed;inset:0;background:var(--bg);z-index:200;overflow-y:auto;padding-bottom:80px;}
 .r-header{background:var(--bg2);border-bottom:1px solid var(--border);padding:22px 40px;display:flex;align-items:center;gap:18px;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px);}
 .r-avatar{width:52px;height:52px;border-radius:50%;border:2px solid var(--cyan);overflow:hidden;flex-shrink:0;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:20px;}
@@ -90,7 +84,6 @@ h1.hero-title .c{color:var(--cyan);}
 .back-btn{background:none;border:1px solid var(--border);color:var(--gray);padding:9px 18px;cursor:pointer;font-family:var(--font);font-size:13px;border-radius:20px;margin-bottom:32px;transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
 .back-btn:hover{border-color:var(--cyan);color:var(--cyan);}
 
-/* SCORE */
 .score-section{text-align:center;margin-bottom:40px;}
 .score-headline{font-size:clamp(20px,3.5vw,29px);font-weight:700;line-height:1.3;margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;}
 .score-donut{display:inline-block;position:relative;width:150px;height:150px;}
@@ -102,14 +95,12 @@ h1.hero-title .c{color:var(--cyan);}
 .score-of100{font-size:11px;color:var(--gray);font-family:var(--mono);}
 .score-note{font-size:13px;color:var(--gray);margin-top:16px;max-width:300px;margin-left:auto;margin-right:auto;}
 
-/* DIAG */
 .diag-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:var(--r);padding:28px;margin-bottom:24px;}
 .diag-tag{font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
 .diag-tag span{width:7px;height:7px;background:var(--red);border-radius:50%;animation:blink 1.5s infinite;}
 .diag-title{font-size:clamp(17px,2.5vw,22px);font-weight:700;margin-bottom:10px;}
 .diag-desc{color:var(--gray);line-height:1.65;font-size:15px;}
 
-/* STATS */
 .stats-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:24px;}
 .stats-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:20px;}
 .slabel{font-family:var(--mono);font-size:10px;color:var(--gray);letter-spacing:1.5px;margin-bottom:8px;}
@@ -122,7 +113,6 @@ h1.hero-title .c{color:var(--cyan);}
 .proj-text{font-size:14px;color:var(--gray);line-height:1.55;}
 .proj-text strong{color:var(--red);}
 
-/* TWO COL */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;}
 .acol{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:24px;}
 .acol.str-col{border-top:2px solid var(--green);}
@@ -136,7 +126,6 @@ h1.hero-title .c{color:var(--cyan);}
 .str-col .acol-list li::before{color:var(--green);}
 .weak-col .acol-list li::before{color:var(--red);}
 
-/* GATE */
 .gate{background:linear-gradient(135deg,var(--bg2) 0%,rgba(0,212,255,0.03) 100%);border:1px solid rgba(0,212,255,0.2);border-radius:var(--r);padding:44px 40px;text-align:center;position:relative;overflow:hidden;margin-bottom:24px;}
 .gate::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(0,212,255,0.05),transparent 70%);pointer-events:none;}
 .gate-tag{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:2px;margin-bottom:14px;}
@@ -151,14 +140,12 @@ h1.hero-title .c{color:var(--cyan);}
 .deliv-name{font-size:13px;font-weight:600;margin-bottom:6px;}
 .deliv-desc{font-size:11px;color:var(--gray);line-height:1.45;}
 
-/* BUTTONS — clean AGM style */
 .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--cyan),#007baa);color:#07090f;border:none;padding:16px 36px;border-radius:4px;font-family:var(--font);font-weight:700;font-size:15px;cursor:pointer;letter-spacing:.3px;transition:all .25s;box-shadow:0 4px 20px rgba(0,212,255,0.2);text-transform:uppercase;}
 .btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,212,255,0.3);}
 
 .btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;padding:16px 36px;border-radius:4px;font-family:var(--font);font-weight:700;font-size:15px;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(37,211,102,0.2);text-transform:uppercase;}
 .btn-wa:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,0.3);}
 
-/* FORM */
 .form-wrap{display:none;flex-direction:column;gap:14px;max-width:440px;margin:24px auto 0;}
 .frow{display:flex;gap:12px;}
 .ffield{flex:1;display:flex;flex-direction:column;gap:6px;}
@@ -167,7 +154,6 @@ h1.hero-title .c{color:var(--cyan);}
 .ffield input:focus{border-color:var(--cyan);}
 .ffield input::placeholder{color:var(--gray2);}
 
-/* FULL AUDIT */
 #full-audit{display:none;}
 .audit-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:20px;}
 .audit-title{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border);}
@@ -181,13 +167,11 @@ h1.hero-title .c{color:var(--cyan);}
 .audit-item-title{font-size:14px;font-weight:600;margin-bottom:5px;}
 .audit-item-desc{font-size:13px;color:var(--gray);line-height:1.55;}
 
-/* FINAL CTA */
 .final-cta{background:linear-gradient(135deg,rgba(0,212,255,0.06),rgba(0,212,255,0.02));border:1px solid rgba(0,212,255,0.2);border-radius:var(--r);padding:44px 40px;text-align:center;margin-top:24px;}
 .final-cta-title{font-size:clamp(22px,3.5vw,30px);font-weight:700;margin-bottom:12px;}
 .final-cta-sub{color:var(--gray);font-size:16px;line-height:1.65;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;}
 .final-cta-note{font-family:var(--mono);font-size:11px;color:var(--gray2);margin-top:16px;letter-spacing:.5px;}
 
-/* RESPONSIVE */
 @media(max-width:640px){
   nav{padding:16px 20px;}
   .proof-bar{gap:28px;}
@@ -213,7 +197,7 @@ h1.hero-title .c{color:var(--cyan);}
 <section id="hero">
   <div class="hero-badge">DIAGNOSTICO GRATUITO · RESULTADO EN 60 SEG</div>
   <h1 class="hero-title">
-    Pega tu Instagram<br>y descubre<br><span class="c">qué frena tus ventas</span>
+    Pega tu Instagram<br>y descubre<br><span class="c">que frena tus ventas</span>
   </h1>
   <p class="hero-sub">Analizamos tu perfil, detectamos el error exacto que frena tu crecimiento y te mostramos el sistema para convertir seguidores en clientes.</p>
 
@@ -239,13 +223,12 @@ h1.hero-title .c{color:var(--cyan);}
       <div class="proof-label">Cuentas analizadas</div>
     </div>
     <div class="proof-item">
-      <div class="proof-num">10 años</div>
+      <div class="proof-num">10 anos</div>
       <div class="proof-label">En ventas digitales</div>
     </div>
   </div>
 </section>
 
-<!-- ANALYZING -->
 <div id="analyzing">
   <div class="a-ring">
     <svg viewBox="0 0 180 180">
@@ -260,7 +243,6 @@ h1.hero-title .c{color:var(--cyan);}
   <div class="a-status" id="a-status">Conectando...</div>
 </div>
 
-<!-- RESULT -->
 <div id="result">
   <div class="r-header">
     <div class="r-avatar" id="r-avatar">R</div>
@@ -286,7 +268,7 @@ h1.hero-title .c{color:var(--cyan);}
           <div class="score-of100">DE 100</div>
         </div>
       </div>
-      <p class="score-note">Los creadores que facturan con su contenido tienen un score de <strong>85+</strong>. La diferencia no es el talento — es el sistema.</p>
+      <p class="score-note">Los creadores que facturan con su contenido tienen un score de <strong>85+</strong>. La diferencia no es el talento, es el sistema.</p>
     </div>
 
     <div class="diag-box">
@@ -407,7 +389,7 @@ async function runAnalysis(username){
   const pct=document.getElementById('a-pct');
   const status=document.getElementById('a-status');
   const C=2*Math.PI*80;
-  const steps=[[15,'Conectando con Instagram...',500],[30,'Leyendo perfil publico...',700],[50,'Escaneando publicaciones...',800],[68,'Detectando patrones...',700],[82,'Calculando alcance real...',600],[93,'Generando diagnostico...',500],[100,'Listo.',400]];
+  const steps=[[15,'Conectando con Instagram...',500],[30,'Leyendo perfil publico...',700],[50,'Escaneando publicaciones...',800],[68,'Detectando patrones...',700],[82,'Calculando alcance real...',600],[93,'Generando diagnostico con IA...',1200],[100,'Listo.',400]];
   const fetchP=fetchProfile(username);
   for(const[p,msg,delay]of steps){
     await sleep(delay);
@@ -416,7 +398,18 @@ async function runAnalysis(username){
     pr.style.strokeDashoffset=C-(p/100)*C;
   }
   const profileData=await fetchP;
-  data={...profileData,...analyze(profileData)};
+  const aiAnalysis=await fetchAnalysis(profileData);
+  const fallbackAnalysis=analyze(profileData);
+  data={
+    ...profileData,
+    score:aiAnalysis?.score||fallbackAnalysis.score,
+    mainTitle:aiAnalysis?.mainTitle||fallbackAnalysis.mainTitle,
+    mainDesc:aiAnalysis?.mainDesc||fallbackAnalysis.mainDesc,
+    strengths:aiAnalysis?.strengths||fallbackAnalysis.strengths,
+    issues:aiAnalysis?.issues||fallbackAnalysis.issues,
+    lost:Math.round((profileData.followers||0)*0.94),
+    proj:aiAnalysis?.projection||fallbackAnalysis.proj
+  };
   await sleep(400);
   renderResult();
 }
@@ -427,6 +420,26 @@ async function fetchProfile(username){
     if(res.ok){const j=await res.json();if(j&&!j.error)return j;}
   }catch(e){}
   return fallback(username);
+}
+
+async function fetchAnalysis(profileData){
+  try{
+    const params=new URLSearchParams({
+      username:profileData.username||'',
+      fullName:profileData.fullName||'',
+      followers:profileData.followers||0,
+      following:profileData.following||0,
+      posts:profileData.posts||0,
+      bio:profileData.bio||'',
+      isVerified:profileData.isVerified||false,
+      isBusiness:profileData.isBusiness||false,
+      externalUrl:profileData.externalUrl||'',
+      category:profileData.category||''
+    });
+    const res=await fetch(`/api/analyze?${params}`);
+    if(res.ok){const j=await res.json();if(j&&!j.error)return j;}
+  }catch(e){}
+  return null;
 }
 
 function fallback(username){
@@ -440,24 +453,24 @@ function analyze(d){
   if(posts<5){score-=28;issues.push('Muy pocas publicaciones — el algoritmo no tiene material para distribuirte.');mainTitle=`Con solo ${posts} publicaciones, Instagram no puede mostrarte a nadie nuevo.`;mainDesc=`El algoritmo necesita volumen para distribuirte. Sin contenido consistente, tu cuenta es invisible para el 94% de personas que podrian convertirse en clientes.`;}
   else if(posts<25){score-=10;issues.push('Frecuencia baja — necesitas al menos 3 publicaciones semanales para que el algoritmo te impulse.');}
   else{strengths.push(`${posts} publicaciones demuestran consistencia — el algoritmo te recompensa.`);score+=3;}
-  if(followers===0||followers<100){score-=18;issues.push('Sin prueba social — ningun visitante tiene razon para quedarse ni seguirte.');if(!mainTitle){mainTitle='Tu cuenta no tiene prueba social todavia.';mainDesc='Cualquier persona que llegue a tu perfil no encuentra razon para quedarse. La prueba social es el primer filtro antes de que alguien te siga o te compre.';}}
+  if(followers===0||followers<100){score-=18;issues.push('Sin prueba social — ningun visitante tiene razon para quedarse ni seguirte.');if(!mainTitle){mainTitle='Tu cuenta no tiene prueba social todavia.';mainDesc='Cualquier persona que llegue a tu perfil no encuentra razon para quedarse.';}}
   else if(followers>10000){strengths.push(`${fmt(followers)} seguidores te dan base solida de prueba social.`);score+=5;}
   else if(followers>2000){strengths.push(`${fmt(followers)} seguidores — construyendo autoridad de forma constante.`);}
   else{score-=5;issues.push(`${fmt(followers)} seguidores es suficiente para empezar a vender, pero necesitas el sistema correcto.`);}
-  if(!bio||bio.length<15){score-=14;issues.push('Bio vacia — tienes 3 segundos para convencer a alguien de que te siga. Tu bio no lo hace.');if(!mainTitle){mainTitle='Tu bio no le dice a nadie que haces ni como puedes ayudarles.';mainDesc='Cuando alguien llega desde un reel viral, su primer filtro es tu bio. Si no comunica a quien ayudas y que deben hacer, se van sin seguirte.';}}
+  if(!bio||bio.length<15){score-=14;issues.push('Bio vacia — tienes 3 segundos para convencer a alguien de que te siga. Tu bio no lo hace.');if(!mainTitle){mainTitle='Tu bio no le dice a nadie que haces ni como puedes ayudarles.';mainDesc='Cuando alguien llega desde un reel viral, su primer filtro es tu bio.';}}
   else if(bio.length>80){strengths.push('Tu bio tiene contenido — el siguiente paso es anadir un CTA directo.');}
   else{strengths.push('Bio presente — asegurate de que incluya a quien ayudas y un CTA claro.');}
-  if(!hasCTA&&!hasExternalLink){score-=14;issues.push('Sin CTA ni enlace externo — tus seguidores no saben que hacer despues de verte.');if(!mainTitle){mainTitle=`Tu cuenta no le dice a nadie que hacer.`;mainDesc=`Tu audiencia te ve, te escucha — y se va sin comprar. Sin una llamada a la accion clara en cada post y en tu bio, cada publicacion es una venta que no ocurrio.`;}}
-  else if(hasExternalLink){strengths.push('Enlace externo en bio — correcto. Asegurate de que la landing page convierte.');score+=3;}
+  if(!hasCTA&&!hasExternalLink){score-=14;issues.push('Sin CTA ni enlace externo — tus seguidores no saben que hacer despues de verte.');if(!mainTitle){mainTitle='Tu cuenta no le dice a nadie que hacer.';mainDesc='Tu audiencia te ve, te escucha — y se va sin comprar.';}}
+  else if(hasExternalLink){strengths.push('Enlace externo en bio — correcto.');score+=3;}
   if(!isBusiness){score-=8;issues.push('Cuenta personal — pierdes herramientas de contacto, metricas reales y CTAs de negocio.');}
   else{strengths.push('Cuenta configurada como negocio — tienes acceso a todas las herramientas de conversion.');score+=2;}
   if(isVerified){strengths.push('Cuenta verificada — maxima autoridad y confianza ante tu audiencia.');score+=5;}
   while(issues.length<3)issues.push('Los captions no incluyen CTAs que muevan al seguidor hacia una accion concreta.');
   while(strengths.length<2)strengths.push('Presencia activa en Instagram — ya tienes la base, falta el sistema.');
   score=Math.max(12,Math.min(92,score));
-  if(!mainTitle){mainTitle='Tu cuenta tiene potencial pero le falta el sistema para convertir.';mainDesc='Tienes presencia, publicas contenido — pero sin el sistema correcto de hooks, CTAs y consistencia, el crecimiento se estanca y las ventas no llegan.';}
+  if(!mainTitle){mainTitle='Tu cuenta tiene potencial pero le falta el sistema para convertir.';mainDesc='Tienes presencia, publicas contenido — pero sin el sistema correcto de hooks, CTAs y consistencia, el crecimiento se estanca.';}
   const lost=Math.round(followers*0.94);
-  const proj=`Si nada cambia, podrias perder hasta <strong>${fmt(Math.round(followers*0.13))}</strong> seguidores potenciales en los proximos 6 meses que ya estaban listos para descubrirte.`;
+  const proj=`Si nada cambia, podrias perder hasta <strong>${fmt(Math.round(followers*0.13))}</strong> seguidores potenciales en los proximos 6 meses.`;
   return{score:Math.round(score),mainTitle,mainDesc,strengths:strengths.slice(0,4),issues:issues.slice(0,4),lost,proj};
 }
 
@@ -482,8 +495,8 @@ function renderResult(){
   document.getElementById('st-fn').textContent=data.followers>5000?'El sistema correcto lo convierte':'El contenido viral lo multiplica';
   document.getElementById('st-reach').textContent=fmt(data.lost);
   document.getElementById('st-proj').innerHTML=data.proj;
-  document.getElementById('str-list').innerHTML=data.strengths.map(s=>`<li>${s}</li>`).join('');
-  document.getElementById('weak-list').innerHTML=data.issues.map(i=>`<li>${i}</li>`).join('');
+  document.getElementById('str-list').innerHTML=(data.strengths||[]).map(s=>`<li>${s}</li>`).join('');
+  document.getElementById('weak-list').innerHTML=(data.issues||[]).map(i=>`<li>${i}</li>`).join('');
 }
 
 function showForm(){
@@ -510,7 +523,7 @@ async function submitLead(){
 
 function renderFullAudit(){
   const items=[
-    {type:data.issues.length>2?'bad':'ok',icon:data.issues.length>2?'X':'OK',title:'Estrategia de contenido',desc:data.issues.length>2?'Tu contenido no sigue un sistema. Cada post es aislado y no acumula autoridad ni mueve a la audiencia hacia la compra.':'Tu contenido tiene estructura. Optimiza los CTAs para que cada post tenga un objetivo claro.'},
+    {type:data.issues&&data.issues.length>2?'bad':'ok',icon:data.issues&&data.issues.length>2?'X':'OK',title:'Estrategia de contenido',desc:data.issues&&data.issues.length>2?'Tu contenido no sigue un sistema. Cada post es aislado y no acumula autoridad ni mueve a la audiencia hacia la compra.':'Tu contenido tiene estructura. Optimiza los CTAs para que cada post tenga un objetivo claro.'},
     {type:data.followers>5000?'ok':'warn',icon:data.followers>5000?'OK':'!',title:'Prueba social y autoridad',desc:data.followers>5000?`${fmt(data.followers)} seguidores es una base solida. El enfoque ahora debe ser en conversion.`:`Con ${fmt(data.followers||0)} seguidores, necesitas construir autoridad a traves de contenido de valor antes de vender.`},
     {type:'bad',icon:'X',title:'Sistema de CTAs',desc:'Tus posts necesitan llamadas a la accion especificas que muevan al seguidor a un paso concreto. Sin CTA, cada post es entretenimiento, no negocio.'},
     {type:'warn',icon:'!',title:'Optimizacion de bio',desc:'Tu bio debe comunicar: a quien ayudas, que problema resuelves y que deben hacer ahora. Es el primer filtro de conversion.'},
