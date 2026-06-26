@@ -423,7 +423,7 @@ async function runAnalysis(username){
 
 async function fetchProfile(username){
   try{
-    const res=await fetch(`/.netlify/functions/scrape?username=${encodeURIComponent(username)}`);
+    const res=await fetch(`/api/scrape?username=${encodeURIComponent(username)}`);
     if(res.ok){const j=await res.json();if(j&&!j.error)return j;}
   }catch(e){}
   return fallback(username);
