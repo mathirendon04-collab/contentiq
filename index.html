@@ -514,7 +514,7 @@ async function submitLead(){
   const btn=document.querySelectorAll('.form-wrap .btn-primary')[0];
   btn.textContent='ENVIANDO...';btn.disabled=true;
   try{
-    await fetch('TU_APPS_SCRIPT_URL',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({timestamp:new Date().toISOString(),nombre:name,email,telefono:phone,instagram:'@'+currentUser,score:data.score,seguidores:data.followers,diagnostico:data.mainTitle})});
+    await fetch('https://script.google.com/macros/s/AKfycbw7S-wfYtq_kRLBGoqhVuAdCArzfpKe3lk6AYEZnVL0s_oMi9-Hajsf8bffg6bT02cv/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({timestamp:new Date().toISOString(),nombre:name,email,telefono:phone,instagram:'@'+currentUser,score:data.score,seguidores:data.followers,diagnostico:data.mainTitle})});
   }catch(e){}
   document.getElementById('gate').style.display='none';
   document.getElementById('full-audit').style.display='block';
