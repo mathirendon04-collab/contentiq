@@ -78,7 +78,7 @@ Genera un JSON con esta estructura exacta (sin markdown, solo JSON puro):
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 1024,
+        max_tokens: 2048,
         messages: [{ role: 'user', content: prompt }]
       })
     });
