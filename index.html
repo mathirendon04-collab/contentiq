@@ -163,6 +163,8 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
 .qopt:hover{border-color:var(--rose-light);background:#fff}
 .qopt.sel{border-color:var(--rose);background:var(--rose-pale)}
 .qopt-letter{font-size:11px;font-weight:700;color:var(--rose);margin-right:9px;letter-spacing:.04em}
+.qopt-other-wrap{margin-top:4px}
+.qopt-other-wrap .qinp{margin-bottom:0;resize:vertical;font-family:'DM Sans',sans-serif}
 .qnav{display:flex;justify-content:space-between;align-items:center;margin-top:1.75rem}
 .qbtn-back{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;padding:8px 0;font-family:'DM Sans',sans-serif;font-weight:500}
 .qbtn-back:hover{color:var(--brown)}
@@ -216,8 +218,45 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
 .f2-urgency .f2-section-title{color:rgba(250,245,240,.45)}
 .f2-urgency .f2-content{color:rgba(250,245,240,.85)}
 
+/* Rutina de hoy */
+.routine-list{display:flex;flex-direction:column;gap:10px}
+.routine-item{background:#fff;border:1px solid var(--gold-light);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start}
+.routine-num{width:24px;height:24px;min-width:24px;border-radius:50%;background:var(--rose-pale);color:var(--rose);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.routine-name{font-weight:700;color:var(--brown);font-size:14px}
+.routine-detail{font-size:12.5px;color:var(--rose);font-weight:600;margin:2px 0 3px}
+.routine-why{font-size:12.5px;color:var(--body);line-height:1.5}
+.routine-note{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5;font-style:italic}
+
+/* Comidas del día */
+.meals-grid{display:flex;flex-direction:column;gap:10px}
+.meal-row{background:#fff;border:1px solid var(--gold-light);border-radius:10px;padding:11px 14px;display:flex;gap:12px;align-items:flex-start}
+.meal-tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:var(--rose);min-width:74px;margin-top:1px}
+.meal-desc{font-size:13.5px;color:var(--brown);line-height:1.5}
+.meal-note{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5;font-style:italic}
+
 .qcta-area{text-align:center;padding:.5rem 0 0}
 .qcta-note{font-size:13.5px;color:var(--body);margin-bottom:1.1rem;line-height:1.6}
+.qdisclaimer{font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:14px;padding-top:14px;border-top:1px solid var(--cream-dark)}
+
+/* Bloque emocional "yo estuve ahí" */
+.f2-emocional{background:linear-gradient(135deg,var(--rose-pale) 0%,var(--cream-dark) 100%);border:1px solid var(--rose-light);border-radius:16px;padding:1.5rem}
+.f2-emocional-label{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--rose);margin-bottom:.7rem;font-weight:700}
+.f2-emocional-text{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.6;color:var(--brown)}
+
+/* Planes con Stripe */
+.plans-wrap{display:flex;flex-direction:column;gap:12px}
+.plan-card{background:#fff;border:1.5px solid var(--cream-dark);border-radius:14px;padding:1.25rem 1.5rem;text-align:left}
+.plan-card.featured{border-color:var(--rose);box-shadow:0 6px 24px rgba(196,115,106,.12)}
+.plan-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.plan-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--brown)}
+.plan-badge{font-size:10px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:#fff;background:var(--rose);border-radius:99px;padding:3px 10px}
+.plan-price{font-size:13.5px;color:var(--rose);font-weight:700;margin-bottom:2px}
+.plan-price small{color:var(--muted);font-weight:500}
+.plan-save{font-size:11.5px;color:var(--gold);font-weight:600;margin-bottom:10px}
+.plan-btn{display:block;width:100%;text-align:center;background:var(--brown);color:#fff;border:none;border-radius:100px;padding:11px 20px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;margin-top:6px;transition:opacity .15s}
+.plan-btn:hover{opacity:.88}
+.plan-card.featured .plan-btn{background:var(--rose)}
+.plans-note{font-size:12px;color:var(--muted);text-align:center;margin-top:4px;line-height:1.5}
 .qbtn-wa{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:#25D366;color:#fff;border:none;border-radius:100px;padding:15px 24px;font-size:15px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:10px;transition:opacity .15s,transform .15s;text-decoration:none}
 .qbtn-wa:hover{opacity:.9;transform:translateY(-1px)}
 .qbtn-wa svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
@@ -296,13 +335,13 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
         Descubre tu nivel de preparación 🌸
       </a>
     </div>
-    <p class="cta-note">Gratis · 5 preguntas · Diagnóstico personalizado al instante</p>
+    <p class="cta-note">Gratis · Diagnóstico personalizado paso a paso</p>
 
-    <!-- ═══ QUIZ DIAGNÓSTICO ═══ -->
+    <!-- ═══ QUIZ DIAGNÓSTICO DINÁMICO ═══ -->
     <div class="quiz-card" id="quizCard">
       <div class="quiz-prog-wrap"><div class="quiz-prog-fill" id="qProg" style="width:0%"></div></div>
 
-      <!-- Q0: bifurcación -->
+      <!-- Q0: bifurcación (única pantalla fija) -->
       <div class="qscreen on" id="qs0">
         <div class="qstep-tag">Empezamos</div>
         <div class="qtitle">¿En qué momento estás tú ahora mismo?</div>
@@ -310,56 +349,45 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
           <button class="qopt" onclick="qPickTrack(this,'embarazo')"><span class="qopt-letter">A</span>Estoy embarazada</button>
           <button class="qopt" onclick="qPickTrack(this,'posparto')"><span class="qopt-letter">B</span>Estoy en el posparto</button>
         </div>
-        <div class="qnav"><span></span><button class="qbtn-next" id="qn0" disabled onclick="qGo('qs1')">Continuar →</button></div>
+        <div class="qnav"><span></span><button class="qbtn-next" id="qn0" disabled onclick="qStartDynamic()">Continuar →</button></div>
       </div>
 
-      <!-- Q1 -->
-      <div class="qscreen" id="qs1">
-        <div class="qstep-tag">Pregunta 1 de 5</div>
-        <div class="qtitle" id="qq1t"></div>
-        <div class="qopts" id="qq1o"></div>
-        <div class="qnav"><button class="qbtn-back" onclick="qGo('qs0')">← Atrás</button><button class="qbtn-next" id="qn1" disabled onclick="qGo('qs2')">Continuar →</button></div>
+      <!-- Pantalla dinámica única: se repinta con cada pregunta que llega del backend -->
+      <div class="qscreen" id="qsDyn">
+        <div class="qstep-tag" id="qDynTag">Pregunta</div>
+        <div class="qtitle" id="qDynTitle"></div>
+        <div class="qopts" id="qDynOpts"></div>
+        <div class="qopt-other-wrap" id="qDynOtherWrap" style="display:none">
+          <textarea class="qinp" id="qDynOtherText" rows="2" placeholder="Escribe tu respuesta..." oninput="qCheckOther()"></textarea>
+        </div>
+        <div class="qnav">
+          <button class="qbtn-back" id="qDynBack" onclick="qGo('qs0')">← Atrás</button>
+          <button class="qbtn-next" id="qDynNext" disabled onclick="qSubmitAnswer()">Continuar →</button>
+        </div>
       </div>
 
-      <!-- Q2 -->
-      <div class="qscreen" id="qs2">
-        <div class="qstep-tag">Pregunta 2 de 5</div>
-        <div class="qtitle" id="qq2t"></div>
-        <div class="qopts" id="qq2o"></div>
-        <div class="qnav"><button class="qbtn-back" onclick="qGo('qs1')">← Atrás</button><button class="qbtn-next" id="qn2" disabled onclick="qGo('qs3')">Continuar →</button></div>
+      <!-- Loading mientras se decide la siguiente pregunta o se valida que ya hay suficiente info -->
+      <div class="qscreen" id="qsThinking">
+        <div class="qloading-wrap">
+          <div><span class="qdot"></span><span class="qdot"></span><span class="qdot"></span></div>
+          <div class="qloading-text" id="qThinkingMsg">Pensando la siguiente pregunta...</div>
+        </div>
       </div>
 
-      <!-- Q3 -->
-      <div class="qscreen" id="qs3">
-        <div class="qstep-tag">Pregunta 3 de 5</div>
-        <div class="qtitle" id="qq3t"></div>
-        <div class="qopts" id="qq3o"></div>
-        <div class="qnav"><button class="qbtn-back" onclick="qGo('qs2')">← Atrás</button><button class="qbtn-next" id="qn3" disabled onclick="qGo('qs4')">Continuar →</button></div>
+      <!-- Error de red / API — nunca avanzamos sin info completa -->
+      <div class="qscreen" id="qsError">
+        <div class="qerror-state">
+          <p id="qErrorText">Hubo un problema de conexión. No pudimos continuar el diagnóstico.</p>
+        </div>
+        <div class="qnav"><span></span><button class="qbtn-next" onclick="qRetry()">Reintentar →</button></div>
       </div>
 
-      <!-- Q4 -->
-      <div class="qscreen" id="qs4">
-        <div class="qstep-tag">Pregunta 4 de 5</div>
-        <div class="qtitle" id="qq4t"></div>
-        <div class="qopts" id="qq4o"></div>
-        <div class="qnav"><button class="qbtn-back" onclick="qGo('qs3')">← Atrás</button><button class="qbtn-next" id="qn4" disabled onclick="qGo('qs5')">Continuar →</button></div>
-      </div>
-
-      <!-- Q5 -->
-      <div class="qscreen" id="qs5">
-        <div class="qstep-tag">Pregunta 5 de 5</div>
-        <div class="qtitle" id="qq5t"></div>
-        <div class="qopts" id="qq5o"></div>
-        <div class="qnav"><button class="qbtn-back" onclick="qGo('qs4')">← Atrás</button><button class="qbtn-next" id="qn5" disabled onclick="qGo('qsf1')">Ver mi diagnóstico →</button></div>
-      </div>
-
-      <!-- FASE 1: preview oscuro + gate -->
+      <!-- FASE 1: gate de datos -->
       <div class="qscreen" id="qsf1">
         <div class="f1-card">
-          <div class="f1-badge">Tu diagnóstico inicial</div>
-          <div class="f1-headline" id="qf1h"></div>
-          <div class="f1-body" id="qf1b"></div>
-          <div class="f1-stats" id="qf1s"></div>
+          <div class="f1-badge">Ya tenemos lo que necesitamos</div>
+          <div class="f1-headline">Tu diagnóstico está <span>listo para generarse</span></div>
+          <div class="f1-body">Analizamos tus respuestas para darte una rutina y alimentación específicas para tu momento exacto. Solo necesitamos tus datos para mostrártelo.</div>
         </div>
         <div class="gate-box">
           <div class="gate-title">Desbloquea tu diagnóstico completo</div>
@@ -374,7 +402,7 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
           <p class="qinp-note">Tus datos son confidenciales. Solo se usan para enviarte tu diagnóstico.</p>
         </div>
         <div class="qnav">
-          <button class="qbtn-back" onclick="qGo('qs5')">← Atrás</button>
+          <span></span>
           <button class="qbtn-next" id="qngate" onclick="qTryGate()">Ver diagnóstico completo →</button>
         </div>
       </div>
@@ -456,7 +484,7 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
       </div>
     </div>
     <div class="cta-wrap">
-      <a href="https://wa.me/15146476383?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="btn" target="_blank" rel="noopener">Quiero este cambio →</a>
+      <a href="https://wa.me/34694267761?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="btn" target="_blank" rel="noopener">Quiero este cambio →</a>
     </div>
   </div>
 </section>
@@ -569,7 +597,7 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
       </div>
     </div>
     <div class="cta-wrap">
-      <a href="https://wa.me/15146476383?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="btn btn--outline" target="_blank" rel="noopener">Escríbeme sin compromiso →</a>
+      <a href="https://wa.me/34694267761?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="btn btn--outline" target="_blank" rel="noopener">Escríbeme sin compromiso →</a>
     </div>
   </div>
 </section>
@@ -580,8 +608,29 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
   <div class="wrap">
     <h2 class="h2">Tu embarazo<br><em>empieza hoy.</em></h2>
     <p class="cta-sub">No esperes al segundo trimestre. No esperes al posparto.<br>El mejor momento para cuidarte es ahora.</p>
+
+    <div class="plans-wrap" style="max-width:420px;margin:2rem auto 0">
+      <div class="plan-card">
+        <div class="plan-top"><span class="plan-name">Plan Mensual</span></div>
+        <div class="plan-price">€70<small> / mes</small></div>
+        <a href="https://buy.stripe.com/eVq5kD1Br3pr7xE04rgw009" class="plan-btn" target="_blank" rel="noopener">Empezar plan mensual</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-top"><span class="plan-name">Plan Trimestral</span><span class="plan-badge">Más elegido</span></div>
+        <div class="plan-price">€178<small> · €59.33/mes</small></div>
+        <div class="plan-save">Ahorras €32 vs mensual</div>
+        <a href="https://buy.stripe.com/bJeaEX7ZPaRTbNU3gDgw00a" class="plan-btn" target="_blank" rel="noopener">Empezar plan trimestral</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-top"><span class="plan-name">Plan Semestral</span></div>
+        <div class="plan-price">€336<small> · €56/mes</small></div>
+        <div class="plan-save">Ahorras €84 vs mensual</div>
+        <a href="https://buy.stripe.com/5kQeVdfshaRT3ho3gDgw00b" class="plan-btn" target="_blank" rel="noopener">Empezar plan semestral</a>
+      </div>
+    </div>
+    <p class="plans-note" style="margin-top:1.25rem">¿Dudas antes de empezar?</p>
     <div class="cta-wrap">
-      <a href="https://wa.me/15146476383?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="btn" target="_blank" rel="noopener" style="max-width:360px;">
+      <a href="https://wa.me/34694267761?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="btn" target="_blank" rel="noopener" style="max-width:360px;">
         Empezar mi cambio 🌸
       </a>
     </div>
@@ -600,14 +649,14 @@ footer{background:var(--brown);color:rgba(255,255,255,.5);text-align:center;padd
 <footer>
   <span class="footer-brand">Stefit</span>
   <div class="footer-links">
-    <a href="https://wa.me/15146476383?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/34694267761?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" target="_blank">WhatsApp</a>
   </div>
   <p>© 2026 Stefit · Todos los derechos reservados</p>
 </footer>
 
 
 <!-- ═══ BOTÓN FLOTANTE WHATSAPP ═══ -->
-<a href="https://wa.me/15146476383?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="wa-float hidden" id="waFloat" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+<a href="https://wa.me/34694267761?text=Hola%20Stefy%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20programa" class="wa-float hidden" id="waFloat" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
   </svg>
@@ -635,27 +684,15 @@ document.querySelectorAll('.ben-card,.belief,.proof-card,.trust-card,.r-card,.nu
 </script>
 
 
-<!-- ═══ QUIZ DIAGNÓSTICO ═══ -->
-<script>
-const QA = { track: null, q: { 1: null, 2: null, 3: null, 4: null, 5: null } };
-const QL = ['A', 'B', 'C', 'D'];
 
-const QQS = {
-  embarazo: [
-    { t: '¿En qué semana de embarazo estás?', o: ['Semanas 1–12 (primer trimestre)', 'Semanas 13–27 (segundo trimestre)', 'Semanas 28 en adelante (tercer trimestre)'] },
-    { t: '¿Cómo describes tu actividad física ahora mismo?', o: ['No hago nada, no sé si puedo', 'Camino algo, sin una rutina real', 'Hago ejercicio pero no sé si está adaptado al embarazo', 'Tengo una rutina clara adaptada a mi trimestre'] },
-    { t: '¿Qué es lo que más te preocupa de tu cuerpo en este embarazo?', o: ['El dolor de espalda, cadera o ciática', 'Controlar el peso sin obsesionarme', 'Cómo recuperarme bien después del parto', 'Hacerle daño al bebé si me muevo o ejercito'] },
-    { t: '¿Cómo describes tu alimentación ahora mismo?', o: ['Como lo que puedo, sin mucho orden', 'Intento comer bien pero no sé si está adaptado', 'Tengo un plan de nutrición para el embarazo'] },
-    { t: '¿Con qué acompañamiento cuentas ahora mismo?', o: ['Ninguno, voy sola con lo que encuentro en internet', 'Leo cuentas y busco info, pero nada personalizado', 'Tengo algún profesional pero no especializado en embarazo activo', 'Tengo acompañamiento especializado en embarazo y ejercicio'] }
-  ],
-  posparto: [
-    { t: '¿Cuánto tiempo llevas en el posparto?', o: ['Menos de 6 semanas (posparto inmediato)', 'Entre 6 semanas y 3 meses', 'Entre 3 y 6 meses', 'Más de 6 meses'] },
-    { t: '¿Cómo describirías tu cuerpo ahora mismo?', o: ['Con dolores: espalda, cadera o suelo pélvico', 'Sin dolor pero sin fuerza ni energía', 'Me siento bien pero no sé por dónde empezar', 'Retomé actividad pero sin guía profesional'] },
-    { t: '¿Alguna de estas situaciones te describe?', o: ['Noto pérdidas de orina al toser, reír o saltar', 'Siento que mi abdomen sigue sin fuerza', 'Tengo molestia en la cicatriz (cesárea o periné)', 'Ninguna, me siento bien físicamente'] },
-    { t: '¿Qué sientes cuando piensas en retomar el ejercicio?', o: ['Miedo a lesionarme o hacerme daño', 'No sé cuándo ni cómo empezar', 'Ganas, pero no tengo tiempo ni energía', 'Ya lo retomé pero no sé si lo hago bien'] },
-    { t: '¿Tienes acompañamiento profesional en este posparto?', o: ['No, voy completamente sola', 'Solo las revisiones médicas obligatorias', 'Tengo algo, pero no específico de posparto activo', 'Sí, tengo acompañamiento especializado en recuperación'] }
-  ]
-};
+<!-- ═══ QUIZ DIAGNÓSTICO DINÁMICO ═══ -->
+<script>
+const QA = { track: null, historial: [] }; // historial: [{ pregunta, respuesta }]
+const Q_MAX = 9; // 6 de diagnóstico + 3 de calificación fija — el backend controla el corte real
+let qCurrentOptions = []; // opciones de la pregunta actual, para detectar selección
+let qCurrentFase = 'diagnostico'; // fase de la pregunta actual ('diagnostico' o 'calificacion'), viaja con cada respuesta
+let qSelectedAnswer = null;
+let qLastFailedAction = null; // para reintentar exactamente la acción que falló
 
 function qPickTrack(btn, track) {
   document.querySelectorAll('#qs0 .qopt').forEach(b => b.classList.remove('sel'));
@@ -664,52 +701,113 @@ function qPickTrack(btn, track) {
   document.getElementById('qn0').disabled = false;
 }
 
-function qRenderQ(num) {
-  const q = QQS[QA.track][num - 1];
-  document.getElementById('qq' + num + 't').textContent = q.t;
-  document.getElementById('qq' + num + 'o').innerHTML = q.o.map((o, i) =>
-    `<button class="qopt${QA.q[num] === o ? ' sel' : ''}" onclick="qPickQ(this,${num},'${o.replace(/'/g, "\\'")}')"><span class="qopt-letter">${QL[i]}</span>${o}</button>`
-  ).join('');
-  document.getElementById('qn' + num).disabled = !QA.q[num];
-}
-
-function qPickQ(btn, num, val) {
-  document.querySelectorAll('#qq' + num + 'o .qopt').forEach(b => b.classList.remove('sel'));
-  btn.classList.add('sel');
-  QA.q[num] = val;
-  document.getElementById('qn' + num).disabled = false;
-}
-
-function qBuildF1() {
-  const t = QA.track, a1 = QA.q[1] || '', a5 = QA.q[5] || '';
-  let h, b, s;
-  if (t === 'embarazo') {
-    const trim = a1.includes('1–12') ? 'primer trimestre' : a1.includes('13–27') ? 'segundo trimestre' : 'tercer trimestre';
-    const semLeft = a1.includes('1–12') ? 'Hasta 28 semanas más' : a1.includes('13–27') ? 'Hasta 15 semanas más' : 'Menos de 12 semanas';
-    const acomp = a5.includes('especializado') ? 'Con acompañamiento' : 'Sin acompañamiento específico';
-    h = `Estás en el <span>${trim}</span> y hay cosas que nadie te está contando.`;
-    b = 'Lo que describes es más común de lo que crees. La mayoría llega a mitad del embarazo sin un plan claro — y eso tiene consecuencias que se ven después del parto, no durante.';
-    s = `<div class="f1-stat-row"><span class="f1-stat-label">Trimestre actual</span><span class="f1-stat-val">${trim.charAt(0).toUpperCase() + trim.slice(1)}</span></div><div class="f1-stat-row"><span class="f1-stat-label">Tiempo estimado restante</span><span class="f1-stat-val">${semLeft}</span></div><div class="f1-stat-row"><span class="f1-stat-label">Acompañamiento especializado</span><span class="f1-stat-val">${acomp}</span></div>`;
-  } else {
-    const meses = a1.includes('6 semanas') ? 'Menos de 6 semanas' : a1.includes('6 semanas y 3') ? '1–3 meses' : a1.includes('3 y 6') ? '3–6 meses' : 'Más de 6 meses';
-    const acomp = a5.includes('especializado') ? 'Con acompañamiento' : 'Sin acompañamiento específico';
-    h = `Llevas <span>${meses.toLowerCase()}</span> en el posparto. La ventana para actuar sigue abierta.`;
-    b = 'Los primeros 12 meses posparto son el momento donde el cuerpo responde mejor al trabajo bien hecho. Después todo cuesta el doble — no porque sea imposible, sino porque el cuerpo ya cerró esa fase de recuperación activa.';
-    s = `<div class="f1-stat-row"><span class="f1-stat-label">Tiempo en posparto</span><span class="f1-stat-val">${meses}</span></div><div class="f1-stat-row"><span class="f1-stat-label">Ventana de recuperación activa</span><span class="f1-stat-val">Abierta</span></div><div class="f1-stat-row"><span class="f1-stat-label">Acompañamiento especializado</span><span class="f1-stat-val">${acomp}</span></div>`;
-  }
-  document.getElementById('qf1h').innerHTML = h;
-  document.getElementById('qf1b').textContent = b;
-  document.getElementById('qf1s').innerHTML = s;
-}
-
 function qGo(id) {
   document.querySelectorAll('.qscreen').forEach(s => s.classList.remove('on'));
   document.getElementById(id).classList.add('on');
   document.getElementById('quizCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  const map = { qs0: 0, qs1: 1, qs2: 2, qs3: 3, qs4: 4, qs5: 5, qsf1: 6, qsf2: 8 };
-  document.getElementById('qProg').style.width = Math.min(Math.round(((map[id] || 0) / 8) * 100), 95) + '%';
-  if (['qs1', 'qs2', 'qs3', 'qs4', 'qs5'].includes(id)) qRenderQ(parseInt(id.slice(2)));
-  if (id === 'qsf1') qBuildF1();
+}
+
+function qUpdateProgress() {
+  // Progreso aproximado: bifurcación (1) + preguntas respondidas, sobre un total estimado de Q_MAX+2 pasos
+  const pct = Math.min(Math.round(((QA.historial.length + 1) / (Q_MAX + 2)) * 100), 92);
+  document.getElementById('qProg').style.width = pct + '%';
+}
+
+function qStartDynamic() {
+  qUpdateProgress();
+  qFetchNextQuestion();
+}
+
+async function qFetchNextQuestion() {
+  qGo('qsThinking');
+  document.getElementById('qThinkingMsg').textContent = QA.historial.length === 0
+    ? 'Preparando tu primera pregunta...'
+    : 'Pensando la siguiente pregunta...';
+
+  qLastFailedAction = qFetchNextQuestion;
+
+  try {
+    const r = await fetch('/api/siguiente-pregunta', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ track: QA.track, historial: QA.historial })
+    });
+    if (!r.ok) throw new Error('network');
+    const data = await r.json();
+
+    // El backend es la única fuente de verdad sobre cuándo parar (controla diagnóstico + calificación).
+    // El frontend solo confía en la señal "listo" — nunca corta por su propia cuenta.
+    if (data.listo) {
+      qGo('qsf1');
+      return;
+    }
+
+    qRenderDynamicQuestion(data.pregunta, data.opciones, data.fase);
+  } catch (e) {
+    qShowError('Hubo un problema generando tu siguiente pregunta. Vuelve a intentarlo.');
+  }
+}
+
+function qRenderDynamicQuestion(pregunta, opciones, fase) {
+  qCurrentOptions = opciones;
+  qSelectedAnswer = null;
+
+  const esCalificacion = fase === 'calificacion';
+  qCurrentFase = esCalificacion ? 'calificacion' : 'diagnostico';
+  document.getElementById('qDynTag').textContent = esCalificacion ? 'Últimos detalles' : `Pregunta ${QA.historial.length + 1}`;
+  document.getElementById('qDynTitle').textContent = pregunta;
+
+  // En preguntas de calificación no incluimos "Otro" — necesitamos respuestas comparables y consistentes.
+  const optsHTML = opciones.map((o, i) =>
+    `<button class="qopt" onclick="qPickDynamic(this,'${o.replace(/'/g, "\\'")}')"><span class="qopt-letter">${String.fromCharCode(65 + i)}</span>${o}</button>`
+  ).join('') + (esCalificacion ? '' : `<button class="qopt" onclick="qPickOther(this)"><span class="qopt-letter">${String.fromCharCode(65 + opciones.length)}</span>Otro (escribir)</button>`);
+
+  document.getElementById('qDynOpts').innerHTML = optsHTML;
+  document.getElementById('qDynOtherWrap').style.display = 'none';
+  document.getElementById('qDynOtherText').value = '';
+  document.getElementById('qDynNext').disabled = true;
+  document.getElementById('qDynBack').style.visibility = QA.historial.length === 0 ? 'hidden' : 'visible';
+
+  qUpdateProgress();
+  qGo('qsDyn');
+}
+
+function qPickDynamic(btn, val) {
+  document.querySelectorAll('#qDynOpts .qopt').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  document.getElementById('qDynOtherWrap').style.display = 'none';
+  qSelectedAnswer = val;
+  document.getElementById('qDynNext').disabled = false;
+}
+
+function qPickOther(btn) {
+  document.querySelectorAll('#qDynOpts .qopt').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  document.getElementById('qDynOtherWrap').style.display = 'block';
+  qSelectedAnswer = null;
+  document.getElementById('qDynNext').disabled = true;
+  document.getElementById('qDynOtherText').focus();
+}
+
+function qCheckOther() {
+  const txt = document.getElementById('qDynOtherText').value.trim();
+  qSelectedAnswer = txt.length > 1 ? txt : null;
+  document.getElementById('qDynNext').disabled = !qSelectedAnswer;
+}
+
+function qSubmitAnswer() {
+  if (!qSelectedAnswer) return;
+  QA.historial.push({ pregunta: document.getElementById('qDynTitle').textContent, respuesta: qSelectedAnswer, fase: qCurrentFase });
+  qFetchNextQuestion();
+}
+
+function qShowError(msg) {
+  document.getElementById('qErrorText').textContent = msg;
+  qGo('qsError');
+}
+
+function qRetry() {
+  if (qLastFailedAction) qLastFailedAction();
 }
 
 function qCheckGate() {
@@ -725,56 +823,177 @@ function qTryGate() {
     return;
   }
   document.getElementById('qErrMsg').style.display = 'none';
-  qLaunchPhase2();
+  qLaunchDiagnostico();
 }
 
-async function qLaunchPhase2() {
+async function qLaunchDiagnostico() {
   qGo('qsf2');
   document.getElementById('qProg').style.width = '100%';
+  document.getElementById('qf2loading').style.display = 'block';
+  document.getElementById('qf2content').style.display = 'none';
   const name = document.getElementById('qiName').value.trim().split(' ')[0];
-  const msgs = ['Analizando tu situación...', 'Preparando tu diagnóstico...', 'Identificando lo que más te puede ayudar ahora...'];
+  const msgs = ['Analizando todas tus respuestas...', 'Construyendo tu rutina de hoy...', 'Preparando tu día de alimentación...'];
   let mi = 0;
   const iv = setInterval(() => { mi = (mi + 1) % msgs.length; document.getElementById('qLoadMsg').textContent = msgs[mi]; }, 2000);
+
+  qLastFailedAction = qLaunchDiagnostico;
 
   const fallback = {
     perfil: 'Diagnóstico personalizado',
     titular: `${name}, tu diagnóstico está listo`,
     intro: 'Hemos analizado tus respuestas y tenemos información importante para ti sobre tu nivel de preparación actual.',
-    fortalezas: ['Tienes conciencia de tu situación actual y eso ya es el primer paso', 'Buscas información activamente en lugar de dejarlo al azar', 'Estás tomando acción — hacer este diagnóstico ya te pone por delante de la mayoría'],
-    gaps: ['Falta un plan estructurado y adaptado a tu momento exacto del proceso', 'El acompañamiento especializado marca una diferencia real que la información genérica no puede suplir', 'La progresión semana a semana es lo que convierte la intención en resultados'],
-    recomendaciones: ['Con un plan adaptado a tu semana exacta, el tipo de trabajo correcto se introduce de forma progresiva y segura'],
+    fortalezas: ['Tienes conciencia de tu situación actual y eso ya es el primer paso', 'Buscas información activamente en lugar de dejarlo al azar', 'Estás tomando acción — completar este diagnóstico ya te pone por delante de la mayoría'],
+    gaps: ['Falta un plan estructurado y adaptado a tu momento exacto del proceso', 'El acompañamiento especializado marca una diferencia real que la información genérica no puede suplir'],
+    rutina_hoy: [
+      { nombre: 'Respiración diafragmática', detalle: '5 minutos, sentada o acostada de lado', por_que: 'Es segura en cualquier momento del embarazo o posparto y es la base de todo lo demás.' },
+      { nombre: 'Activación consciente del suelo pélvico', detalle: 'Sin repeticiones de fuerza — solo nota la zona, contrae muy suave y relaja, unas pocas veces', por_que: 'Reconecta con tu cuerpo sin forzar nada, sea cual sea tu momento.' },
+      { nombre: 'Caminata suave', detalle: '10-15 minutos a paso tranquilo, si te sientes con energía', por_que: 'Mejora circulación y energía de forma segura.' }
+    ],
+    rutina_nota: 'Esta es una rutina general de mínimo riesgo — tu plan exacto, adaptado a tu semana o fase específica, se construye junto a Stefy.',
+    alimentacion_hoy: {
+      desayuno: 'Avena con plátano, semillas de chía y un puñado de nueces',
+      almuerzo: 'Pollo o legumbres con arroz integral y ensalada variada',
+      cena: 'Tortilla de huevo con espinaca y aguacate',
+      snack: 'Yogur griego con frutos rojos'
+    },
+    alimentacion_nota: 'Esto es un ejemplo de un día — el plan nutricional completo se ajusta a tu momento exacto con Stefy.',
     urgencia: `Cada semana de tu ${QA.track} cuenta. El cuerpo responde de forma diferente según el momento — y actuar ahora, con el plan correcto, es lo que marca la diferencia en cómo vives este proceso.`,
-    proximo_paso: 'Stefy puede revisar tu caso y decirte exactamente por dónde empezar.'
+    proximo_paso: 'Stefy puede revisar tu caso y decirte exactamente por dónde empezar.',
+    conexion_emocional: 'He acompañado a cientos de mujeres en este mismo punto, buscando respuestas antes de dar el siguiente paso. Eso que sientes ahora mismo es real y es válido. La pregunta no es si puedes con esto sola — es qué va a ser diferente la próxima semana si sigues esperando el momento perfecto.',
+    resumen_interno: `${QA.track === 'embarazo' ? 'Embarazo' : 'Posparto'} — fallback del frontend usado (sin respuesta del servidor), revisar caso manualmente`,
+    calificacion: 'bajo'
   };
 
   try {
     const r = await fetch('/api/diagnostico', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ track: QA.track, answers: [QA.q[1], QA.q[2], QA.q[3], QA.q[4], QA.q[5]], name })
+      body: JSON.stringify({ track: QA.track, historial: QA.historial, name })
     });
     clearInterval(iv);
+    if (!r.ok) throw new Error('network');
     const data = await r.json();
-    const d = data.diagnostico || fallback;
-    qRenderPhase2(d);
+    const d = (data.diagnostico && qDiagnosticoCompleto(data.diagnostico)) ? data.diagnostico : fallback;
+    qRenderDiagnostico(d);
+    qGuardarLeadEnSheet(d, data._meta);
   } catch (e) {
     clearInterval(iv);
-    qRenderPhase2(fallback);
+    qRenderDiagnostico(fallback);
+    qGuardarLeadEnSheet(fallback, { fallback_usado: true, compromiso: '', freno: '', disposicion: '' });
   }
 }
 
-function qRenderPhase2(d) {
+function qGuardarLeadEnSheet(diagnostico, meta) {
+  // Se guarda en background: nunca bloquea ni retrasa lo que ve la usuaria.
+  // Si falla, solo queda en la consola del navegador — no afecta la experiencia.
+  const momentoRespuesta = (QA.historial.find(h => h.fase === 'diagnostico') || {}).respuesta || '';
+  try {
+    fetch('/api/guardar-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: document.getElementById('qiName').value.trim(),
+        telefono: document.getElementById('qiPhone').value.trim(),
+        correo: document.getElementById('qiMail').value.trim(),
+        track: QA.track,
+        momento: momentoRespuesta,
+        calificacion: diagnostico.calificacion,
+        compromiso: meta?.compromiso || '',
+        freno: meta?.freno || '',
+        disposicion: meta?.disposicion || '',
+        resumen: diagnostico.resumen_interno || '',
+        fallback_usado: !!meta?.fallback_usado
+      })
+    }).catch(err => console.error('No se pudo guardar el lead en el Sheet:', err));
+  } catch (err) {
+    console.error('Error preparando guardado de lead:', err);
+  }
+}
+
+function qDiagnosticoCompleto(d) {
+  const camposTexto = ['perfil', 'titular', 'intro', 'rutina_nota', 'alimentacion_nota', 'urgencia', 'proximo_paso', 'conexion_emocional'];
+  if (camposTexto.some(c => typeof d[c] !== 'string' || !d[c].trim())) return false;
+  if (!['alto', 'bajo'].includes((d.calificacion || '').toLowerCase())) return false;
+  if (!Array.isArray(d.fortalezas) || !d.fortalezas.length) return false;
+  if (!Array.isArray(d.gaps) || !d.gaps.length) return false;
+  if (!Array.isArray(d.rutina_hoy) || !d.rutina_hoy.length) return false;
+  if (d.rutina_hoy.some(ej => !ej.nombre || !ej.detalle || !ej.por_que)) return false;
+  if (!d.alimentacion_hoy || !d.alimentacion_hoy.desayuno || !d.alimentacion_hoy.almuerzo || !d.alimentacion_hoy.cena || !d.alimentacion_hoy.snack) return false;
+  return true;
+}
+
+function qRenderDiagnostico(d) {
   const trackLabel = QA.track === 'embarazo' ? 'Embarazo' : 'Posparto';
-  const phone = document.getElementById('qiPhone').value.trim();
   const waMsg = encodeURIComponent('Hola Stefy, acabo de ver mi diagnóstico y quiero saber más sobre el acompañamiento');
   document.getElementById('qf2loading').style.display = 'none';
 
-  const recs = d.recomendaciones && d.recomendaciones.length
+  const movBlock = (d.rutina_hoy && d.rutina_hoy.length)
     ? `<div class="f2-section">
-        <div class="f2-section-title">Por dónde empezar</div>
-        <div class="f2-content">${d.recomendaciones.map(r => `<div class="f2-bullet"><div class="f2-bullet-dot green"></div><div>${r}</div></div>`).join('')}</div>
+        <div class="f2-section-title">🤸 Tu rutina de hoy</div>
+        <div class="routine-list">
+          ${d.rutina_hoy.map((ej, i) => `
+            <div class="routine-item">
+              <div class="routine-num">${i + 1}</div>
+              <div>
+                <div class="routine-name">${ej.nombre}</div>
+                <div class="routine-detail">${ej.detalle}</div>
+                <div class="routine-why">${ej.por_que}</div>
+              </div>
+            </div>`).join('')}
+        </div>
+        ${d.rutina_nota ? `<div class="routine-note">${d.rutina_nota}</div>` : ''}
       </div>`
     : '';
+
+  const aliBlock = d.alimentacion_hoy
+    ? `<div class="f2-section">
+        <div class="f2-section-title">🥗 Tu día de alimentación</div>
+        <div class="meals-grid">
+          <div class="meal-row"><div class="meal-tag">Desayuno</div><div class="meal-desc">${d.alimentacion_hoy.desayuno || ''}</div></div>
+          <div class="meal-row"><div class="meal-tag">Almuerzo</div><div class="meal-desc">${d.alimentacion_hoy.almuerzo || ''}</div></div>
+          <div class="meal-row"><div class="meal-tag">Cena</div><div class="meal-desc">${d.alimentacion_hoy.cena || ''}</div></div>
+          <div class="meal-row"><div class="meal-tag">Snack</div><div class="meal-desc">${d.alimentacion_hoy.snack || ''}</div></div>
+        </div>
+        ${d.alimentacion_nota ? `<div class="meal-note">${d.alimentacion_nota}</div>` : ''}
+      </div>`
+    : '';
+
+  const esAlto = (d.calificacion || '').toLowerCase() === 'alto';
+
+  const ctaFinal = esAlto
+    ? `<div class="qcta-area">
+        <p class="qcta-note">${d.proximo_paso}</p>
+        <a href="https://wa.me/34694267761?text=${waMsg}" class="qbtn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Hablar con Stefy ahora
+        </a>
+        <a href="#cta-final" class="qbtn-outline">Ver todos los programas</a>
+        <p class="qdisclaimer">Esta es una orientación general, no un diagnóstico médico. Si sientes dolor, sangrado o cualquier molestia que te preocupe, consulta primero con tu médico antes de continuar.</p>
+      </div>`
+    : `<div class="qcta-area">
+        <p class="qcta-note">${d.proximo_paso}</p>
+        <div class="plans-wrap">
+          <div class="plan-card">
+            <div class="plan-top"><span class="plan-name">Plan Mensual</span></div>
+            <div class="plan-price">€70<small> / mes</small></div>
+            <a href="https://buy.stripe.com/eVq5kD1Br3pr7xE04rgw009" class="plan-btn" target="_blank" rel="noopener">Empezar plan mensual</a>
+          </div>
+          <div class="plan-card featured">
+            <div class="plan-top"><span class="plan-name">Plan Trimestral</span><span class="plan-badge">Más elegido</span></div>
+            <div class="plan-price">€178<small> · €59.33/mes</small></div>
+            <div class="plan-save">Ahorras €32 vs mensual</div>
+            <a href="https://buy.stripe.com/bJeaEX7ZPaRTbNU3gDgw00a" class="plan-btn" target="_blank" rel="noopener">Empezar plan trimestral</a>
+          </div>
+          <div class="plan-card">
+            <div class="plan-top"><span class="plan-name">Plan Semestral</span></div>
+            <div class="plan-price">€336<small> · €56/mes</small></div>
+            <div class="plan-save">Ahorras €84 vs mensual</div>
+            <a href="https://buy.stripe.com/5kQeVdfshaRT3ho3gDgw00b" class="plan-btn" target="_blank" rel="noopener">Empezar plan semestral</a>
+          </div>
+        </div>
+        <p class="plans-note">¿Dudas antes de empezar? <a href="https://wa.me/34694267761?text=${waMsg}" target="_blank" rel="noopener" style="color:var(--rose);font-weight:600">Escríbele a Stefy</a></p>
+        <p class="qdisclaimer">Esta es una orientación general, no un diagnóstico médico. Si sientes dolor, sangrado o cualquier molestia que te preocupe, consulta primero con tu médico antes de continuar.</p>
+      </div>`;
 
   document.getElementById('qf2content').innerHTML = `
     <div class="f2-header">
@@ -790,19 +1009,17 @@ function qRenderPhase2(d) {
       <div class="f2-section-title">Lo que te está frenando ahora mismo</div>
       <div class="f2-content">${(d.gaps || []).map(g => `<div class="f2-bullet"><div class="f2-bullet-dot rose"></div><div>${g}</div></div>`).join('')}</div>
     </div>
-    ${recs}
+    ${movBlock}
+    ${aliBlock}
     <div class="f2-urgency">
       <div class="f2-section-title">Tu ventana de tiempo</div>
       <div class="f2-content">${d.urgencia}</div>
     </div>
-    <div class="qcta-area">
-      <p class="qcta-note">${d.proximo_paso}</p>
-      <a href="https://wa.me/34694267761?text=${waMsg}" class="qbtn-wa" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Hablar con Stefy ahora
-      </a>
-      <a href="#cta-final" class="qbtn-outline">Ver todos los programas</a>
-    </div>`;
+    <div class="f2-emocional">
+      <div class="f2-emocional-label">De parte de Stefy</div>
+      <div class="f2-emocional-text">${d.conexion_emocional}</div>
+    </div>
+    ${ctaFinal}`;
   document.getElementById('qf2content').style.display = 'flex';
   document.getElementById('quizCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
